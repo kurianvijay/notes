@@ -11,14 +11,15 @@
 
     for (let index = 0; index < oldNoteList.length; index++) {
 
-      newNoteList.push(oldNoteList[index].text)
-      // console.log("oldlist", oldNoteList[index].text)
+      newNoteList.push((oldNoteList[index].text).substring(0,19))
+      // console.log("X", oldNoteList[index].text.substring(0,19))
     }
     note = newNoteList.join("</div></li><li><div>")
+    console.log("notter", note)
+    // console.log("notter1", note)
 
     return "<ul><li><div>" + note + "</div></li></ul>"
   }
-
 
   exports.NoteListView = NoteListView;
 })(this);

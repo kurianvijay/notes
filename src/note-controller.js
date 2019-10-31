@@ -1,3 +1,6 @@
+// var element = document.getElementById("app")
+// element.innerHTML = "Howdy"
+
 (function (exports) {
 
   function NoteController(noteListModel = new NoteList()) {
@@ -5,10 +8,11 @@
     this.noteListView = new NoteListView(noteListModel)
   };
 
-  NoteController.prototype.renderHTML = function() {
-    var element = document.getElementById("app")
+  NoteController.prototype.renderHTML = function(doc = document) {
+    var element = doc.getElementById("app")
+
     return element.innerHTML = this.noteListView.viewNoteListHTML()
-    // return element.innerHTML
+    
   };
 
   exports.NoteController = NoteController;

@@ -1,11 +1,11 @@
 function testCreateNote(){
-  var note = new Note("hello")
+  var note = new Note("hello JAY")
   console.log("note", note)
   var noteList = new NoteList()
   console.log("noteList", noteList)
   // assert test below is not working. Not sure why???
   // assert.isEqual(noteList.notes === [])
-  
+
   noteList.createNote(note)
   // console.log("noteList", noteList)
 
@@ -16,7 +16,7 @@ function testCreateNote(){
 };
 
 function testViewAllNotes(){
-  var note1 = new Note("hello")
+  var note1 = new Note("hello JAY")
   var note2 = new Note("goodbye")
   var noteList = new NoteList()
 
